@@ -4,7 +4,7 @@ B2!Java!Malik!Urdu Bazar Lahore!11!Computer
 B3!Python!Arif!Gov of Punjab!0!Arts
 B4!English!Hamid!MA productions!12!Arts
 B5!Arabic!Hamid!Abstergo productions!12!Arts
-B6!Applied Physc!Einstein!Mz!11!Computer
+B6!Applied Physc!Einstein!Mz!12!Computer
 B7!Bioinformatics!Anum Munir!Comsats!55!Biology
 B8!Calculus!Anum Munir!Comsats!55!Mathematics
 B10!DLD!Sohail!Comsats!12!Physics

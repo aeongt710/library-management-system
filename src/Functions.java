@@ -25,6 +25,43 @@ public class Functions{
         load_borrowed();
  }   
     
+    public boolean return_book(String b_ID,String m_ID) throws IOException{
+        for(int i=0;i<borrow.size();i++){
+            if(borrow.get(i).getBookID().equalsIgnoreCase(b_ID)&&borrow.get(i).getMemID().equalsIgnoreCase(m_ID)){
+                borrow.remove(i);
+                
+                for(int j=0;j<mems.size();j++){
+                    if(mems.get(j).getMemID().equalsIgnoreCase(m_ID)){
+                        mems.get(j).setBorr(mems.get(j).getBorr()+1);
+                        break;
+                    }
+                }
+                
+                for(int k=0;k<books.size();k++){
+                    if(books.get(k).getSerial_no().equalsIgnoreCase(b_ID)){
+                        books.get(k).setQuantity(books.get(k).getQuantity()+1);
+                        break;
+                    }
+                }
+                boolean b=returnFiles();
+                return b;
+            }
+        }
+        return false;
+    }
+    
+    public boolean returnFiles() throws IOException{
+        writeboomem();
+        ExportToFile ex=new ExportToFile("Borrowed.txt");
+        ex.clearContents();
+        for(int i=0;i<borrow.size();i++){
+            String write=borrow.get(i).getBookID()+"!"+borrow.get(i).getMemID()+"!"+borrow.get(i).getDate();
+            ex.writetofile(write);
+        }
+        return true;
+    }
+ 
+ 
     public void add_book(Book b) throws IOException{//B4!Html!Hamid!MA productions!12!Eng
 
         this.books.add(b);
