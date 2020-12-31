@@ -40,7 +40,11 @@ public class Functions{
     public ArrayList<users> getUse() {
         return use;
     }
- 
+    public void add_user(String n,String p) throws IOException{
+        ExportToFile ex=new ExportToFile("users.txt");
+        String w=n+"!"+p;
+        ex.writetofile(w);
+    }
  
     public boolean return_book(String b_ID,String m_ID) throws IOException{
         Borrowed x;
