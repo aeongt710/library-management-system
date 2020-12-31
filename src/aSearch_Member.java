@@ -410,7 +410,7 @@ public class aSearch_Member extends javax.swing.JFrame {
                 .addComponent(jLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         jPanelIDSearch.setBackground(new java.awt.Color(51, 102, 255));
@@ -533,7 +533,7 @@ public class aSearch_Member extends javax.swing.JFrame {
                 .addComponent(jLabel20)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLayeredPane2.setLayer(jPanelBookSearch, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -554,11 +554,11 @@ public class aSearch_Member extends javax.swing.JFrame {
         jLayeredPane2Layout.setVerticalGroup(
             jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                .addComponent(jPanelBookSearch, javax.swing.GroupLayout.DEFAULT_SIZE, 364, Short.MAX_VALUE)
+                .addComponent(jPanelBookSearch, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                    .addComponent(jPanelIDSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 364, Short.MAX_VALUE)
+                    .addComponent(jPanelIDSearch, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
                     .addContainerGap()))
         );
 
@@ -939,9 +939,10 @@ public class aSearch_Member extends javax.swing.JFrame {
             if(b!=null){
                 jTFnameID.setText(b.getMemID());
                 jTFnameAuthor.setText(b.getContact());
-                jTFnamePublisher.setText(b.getBorr()+"");
+                
                 jTFnameCategory.setText(b.getAddress());
                 ArrayList<Book> books=f.borrowed_book_by_id(b.getMemID());
+                jTFnamePublisher.setText(books.size()+"");
               String names="";
                 modeln.setRowCount(0);
                 if(books!=null){

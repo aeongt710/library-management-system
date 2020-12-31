@@ -30,9 +30,10 @@ public class NewMain {
      
         
         
-        String d = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        String d = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy (hh:mm:ss)"));
         System.out.println(d);
-        
+        Functions f=new Functions();
+        System.out.println(f.getB_logs().size());
         
 //        load_books();
 //        load_mems();

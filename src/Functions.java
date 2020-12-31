@@ -18,16 +18,35 @@ public class Functions{
     private ArrayList<Book> books=new ArrayList();
     private ArrayList<Members> mems=new ArrayList();
     private ArrayList<Borrowed> borrow=new ArrayList();
+    private ArrayList<bookLogs> b_logs=new ArrayList();
+    private ArrayList<users> use=new ArrayList();
     
  Functions() throws IOException{
         load_mems();
         load_books();
         load_borrowed();
+        load_b_logs();
+        load_users();
  }   
-    
+        public void load_users() throws IOException{
+        FileTokenizer tok=new FileTokenizer("users.txt","!");
+        ArrayList<String []> tokkens=tok.getTokkens();
+        for(int i=0;i<tokkens.size();i++){
+            String a[]=tokkens.get(i);
+            use.add(new users(a[0],a[1]));
+        }
+    }
+
+    public ArrayList<users> getUse() {
+        return use;
+    }
+ 
+ 
     public boolean return_book(String b_ID,String m_ID) throws IOException{
+        Borrowed x;
         for(int i=0;i<borrow.size();i++){
             if(borrow.get(i).getBookID().equalsIgnoreCase(b_ID)&&borrow.get(i).getMemID().equalsIgnoreCase(m_ID)){
+                x=borrow.get(i);
                 borrow.remove(i);
                 
                 for(int j=0;j<mems.size();j++){
@@ -43,14 +62,19 @@ public class Functions{
                         break;
                     }
                 }
-                boolean b=returnFiles();
+                boolean b=returnFiles(x);
                 return b;
             }
         }
         return false;
     }
+
+    public ArrayList<bookLogs> getB_logs() {
+        return b_logs;
+    }
     
-    public boolean returnFiles() throws IOException{
+    
+    public boolean returnFiles(Borrowed x) throws IOException{
         writeboomem();
         ExportToFile ex=new ExportToFile("Borrowed.txt");
         ex.clearContents();
@@ -58,9 +82,21 @@ public class Functions{
             String write=borrow.get(i).getBookID()+"!"+borrow.get(i).getMemID()+"!"+borrow.get(i).getDate();
             ex.writetofile(write);
         }
+        ExportToFile ex2=new ExportToFile("report.txt");
+        String d = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy  hh:mm:ss"));
+        String w=x.getBookID()+"!"+x.getMemID()+"!"+x.getDate()+"!"+d;
+        ex2.writetofile(w);
+        b_logs.add(new bookLogs(x.getBookID(),x.getMemID(),x.getDate(),d));
         return true;
     }
- 
+         public void load_b_logs() throws IOException{
+        FileTokenizer mem_tok=new FileTokenizer("report.txt","!");
+        ArrayList<String []> mem_tokkens= mem_tok.getTokkens();
+        for(int i=0;i<mem_tokkens.size();i++){
+            String a[]=mem_tokkens.get(i);
+            b_logs.add(new bookLogs(a[0],a[1],a[2],a[3])); 
+        } 
+    }
  
     public void add_book(Book b) throws IOException{//B4!Html!Hamid!MA productions!12!Eng
 
@@ -176,7 +212,7 @@ public class Functions{
                 return null;
         }  
         public void write_borrow(String memID,String booID) throws IOException{
-            String d = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+            String d = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy (hh:mm:ss)"));
             String write=booID+"!"+memID+"!"+d;
             ExportToFile ex=new ExportToFile("Borrowed.txt");
             ex.writetofile(write);
