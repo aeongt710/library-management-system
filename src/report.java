@@ -84,11 +84,11 @@ public class report extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(51, 102, 255));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_order_history_100px.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_business_report_100px.png"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Borrow History");
+        jLabel2.setText("Detailed Report");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
