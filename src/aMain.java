@@ -2,7 +2,10 @@
 
 
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -33,7 +36,7 @@ public class aMain extends javax.swing.JFrame {
         jPanel5.setVisible(false);
         jLabelinvalid.setVisible(false);
         try{
-            f=new Functions();
+            load();
         }
         catch(java.io.IOException e){
             JOptionPane.showMessageDialog(this,"Some text file is missing!");
@@ -961,22 +964,18 @@ public class aMain extends javax.swing.JFrame {
         jPanelloginLayout.setHorizontalGroup(
             jPanelloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelloginLayout.createSequentialGroup()
+                .addGap(350, 350, 350)
+                .addGroup(jPanelloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelpas)
+                    .addComponent(jLabeluse))
+                .addGap(31, 31, 31)
                 .addGroup(jPanelloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelloginLayout.createSequentialGroup()
-                        .addGap(280, 280, 280)
-                        .addGroup(jPanelloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabelpas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabeluse))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanelloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelinvalid)
-                            .addGroup(jPanelloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jPasswordFieldpass, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                .addComponent(jTextFieldusername, javax.swing.GroupLayout.Alignment.LEADING))))
-                    .addGroup(jPanelloginLayout.createSequentialGroup()
-                        .addGap(338, 338, 338)
-                        .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(411, Short.MAX_VALUE))
+                    .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelinvalid)
+                    .addGroup(jPanelloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextFieldusername, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPasswordFieldpass, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(376, Short.MAX_VALUE))
         );
         jPanelloginLayout.setVerticalGroup(
             jPanelloginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1357,13 +1356,21 @@ public class aMain extends javax.swing.JFrame {
     private void jPasswordFieldpassKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordFieldpassKeyPressed
         // TODO add your handling code here:
         if (evt.getKeyCode()==KeyEvent.VK_ENTER){
-            login();
+            try {
+                login();
+            } catch (IOException ex) {
+                Logger.getLogger(aMain.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }//GEN-LAST:event_jPasswordFieldpassKeyPressed
 
     private void jPanel14MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel14MousePressed
-        // TODO add your handling code here:
-        login();
+         try {
+             // TODO add your handling code here:
+             login();
+         } catch (IOException ex) {
+             Logger.getLogger(aMain.class.getName()).log(Level.SEVERE, null, ex);
+         }
     }//GEN-LAST:event_jPanel14MousePressed
 
     private void jPanel14MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel14MouseEntered
@@ -1387,8 +1394,12 @@ public class aMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel14MouseExited
 
     private void jLabel6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MousePressed
-        // TODO add your handling code here:
-        login();
+         try {
+             // TODO add your handling code here:
+             login();
+         } catch (IOException ex) {
+             Logger.getLogger(aMain.class.getName()).log(Level.SEVERE, null, ex);
+         }
     }//GEN-LAST:event_jLabel6MousePressed
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
@@ -1637,7 +1648,8 @@ public class aMain extends javax.swing.JFrame {
             }
         });
     }
-    private void login(){
+    private void login() throws IOException{
+        load();
         name=jTextFieldusername.getText();
         pass=jPasswordFieldpass.getText();
          ArrayList<users> s=f.getUse();
@@ -1658,10 +1670,12 @@ public class aMain extends javax.swing.JFrame {
             }
             else{
                 jLabelinvalid.setVisible(true);
-            }   
+            }
         }
     }
-
+    public void load() throws IOException{
+        f=new Functions();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

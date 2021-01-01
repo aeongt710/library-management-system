@@ -34,6 +34,7 @@ public class aBookList extends javax.swing.JFrame {
         catch(java.io.IOException e){
             JOptionPane.showMessageDialog(this,"Books.txt file not found!");
         }
+        jTextField1.setEditable(false);
     }
     
 

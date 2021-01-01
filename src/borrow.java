@@ -696,6 +696,9 @@ public class borrow extends javax.swing.JFrame {
    private void borrow(){
        String mem_id=jTextField1.getText();
         String b_id=jTFidEnter.getText();
+        boolean double_check=f.check_double_borrow(b_id, mem_id);
+        
+        if(double_check)
         for(int i=0;i<me.size();i++){
             if(mem_id.equalsIgnoreCase(me.get(i).getMemID())){
                 
@@ -729,6 +732,9 @@ public class borrow extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(this,"Maximum borrow limit reached...");
                 }
             }
+        }
+        else{
+            JOptionPane.showMessageDialog(this,"Book already borrowed!");
         }
    }
 

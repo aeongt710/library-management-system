@@ -42,6 +42,7 @@ public class Functions{
     }
     public void add_user(String n,String p) throws IOException{
         ExportToFile ex=new ExportToFile("users.txt");
+        this.use.add(new users(n,p));
         String w=n+"!"+p;
         ex.writetofile(w);
     }
@@ -77,6 +78,14 @@ public class Functions{
         return b_logs;
     }
     
+    public boolean check_double_borrow(String book,String mem){
+        for(int i=0;i<borrow.size();i++){
+            if(borrow.get(i).getMemID().equalsIgnoreCase(mem)&&borrow.get(i).getBookID().equalsIgnoreCase(book)){
+                return false;
+            }
+        }
+        return true;
+    }
     
     public boolean returnFiles(Borrowed x) throws IOException{
         writeboomem();

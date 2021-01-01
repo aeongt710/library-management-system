@@ -1148,6 +1148,7 @@ public class aAddBookMember extends javax.swing.JFrame {
             Book b=new Book("B"+f.getBooks().size(),BookAddjTextField1.getText(),BookAddjTextField3.getText(),BookAddjTextField4.getText(),Integer.parseInt(BookAddjTextField5.getText()), (String) BookAddjComboBox1.getSelectedItem());
             f.add_book(b);
             JOptionPane.showMessageDialog(this,"Book added successfully...");
+            clearAll();
         }
     }
 

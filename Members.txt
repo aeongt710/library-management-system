@@ -1,7 +1,5 @@
-Ali!Cantt Bazar!Abbottabad!M0!Premium!0!0333152452
-Ahmad!House no 123!Karachi!M1!Premium!1!0333333333
-Hadi!Street 2, house no. 23!Lahore!M2!Premium!2!033323545
-Zaid!Behria town!Islamabad!M3!Premium!4!031431531
-Zubair!Comsats road!Abbottabad!M4!Premium!5!0124135314
-Ali!Faizabad chowk!Islamabad!M5!Premium!5!03142423432
-Ahmad!Cantt!Multan!M6!Basic!3!012412
+Ali!Karachi main bazar!Karachi!M0!Basic!3!0312412412
+asghar!G11!Islamabad!M1!Premium!5!01422141
+Hadi!Nawa Shar!Abbottabad!M2!Premium!4!01413412
+Anas!Ghol chowk!Lahore!M3!Basic!2!40124124
+Ahmad!Rex city!Faislabad!M4!Premium!4!0124120491
