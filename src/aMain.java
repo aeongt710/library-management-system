@@ -1661,8 +1661,14 @@ public class aMain extends javax.swing.JFrame {
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
         // TODO add your handling code here:
-        usersss s=new usersss();
-        s.setVisible(true);
+        if(name.equals("admin")){
+            usersss s=new usersss();
+            s.setVisible(true);
+        }
+        else{
+            JOptionPane.showMessageDialog(this,"You must login as admin to view this!");
+        }
+        
     }//GEN-LAST:event_jLabel16MouseClicked
 
     private void jLabel16MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseEntered
@@ -1677,8 +1683,13 @@ public class aMain extends javax.swing.JFrame {
 
     private void jPanel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel20MouseClicked
         // TODO add your handling code here:
-        usersss s=new usersss();
-        s.setVisible(true);
+        if(name.equals("admin")){
+            usersss s=new usersss();
+            s.setVisible(true);
+        }
+        else{
+            JOptionPane.showMessageDialog(this,"You must login as admin to view this!");
+        }
     }//GEN-LAST:event_jPanel20MouseClicked
 
     private void jPanel20MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel20MouseEntered
