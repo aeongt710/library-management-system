@@ -84,6 +84,8 @@ public class Functions{
                 return false;
             }
         }
+        String d = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy  hh:mm:ss"));
+        this.borrow.add(new Borrowed(book,mem,d));
         return true;
     }
     

@@ -1,7 +1,7 @@
-B1!OOP!Junaid!MZ publisher!10!Computer
-B2!Bioinformatics!Anum Munir!Urdu Bazar!4!Biology
-B3!Calculus 1!Samera Bano!Taj publisher!7!Mathematics
-B4!Applied physics!Sohail Muzamil!Taj publisher!16!Physics
-B5!HTML!Umair!IT series!18!Computer
-B6!Python!Javed!IT series!18!Computer
+B1!OOP!Junaid!MZ publisher!8!Computer
+B2!Bioinformatics!Anum Munir!Urdu Bazar!3!Biology
+B3!Calculus 1!Samera Bano!Taj publisher!6!Mathematics
+B4!Applied physics!Sohail Muzamil!Taj publisher!10!Physics
+B5!HTML!Umair!IT series!19!Computer
+B6!Python!Javed!IT series!17!Computer
 B7!Node Js!Hamza!IT series!0!Computer

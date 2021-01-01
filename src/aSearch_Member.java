@@ -297,7 +297,7 @@ public class aSearch_Member extends javax.swing.JFrame {
         jPanelBookSearch.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanelBookSearch.setPreferredSize(new java.awt.Dimension(340, 286));
 
-        jTFnameEnter.setToolTipText("Enter Book name (Case-insensitive)");
+        jTFnameEnter.setToolTipText("Enter name");
         jTFnameEnter.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTFnameEnterKeyPressed(evt);
@@ -437,7 +437,7 @@ public class aSearch_Member extends javax.swing.JFrame {
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("Address:");
 
-        jTFidEnter.setToolTipText("Enter Book ID (Case-Sensitive)");
+        jTFidEnter.setToolTipText("Enter ID");
         jTFidEnter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTFidEnterActionPerformed(evt);

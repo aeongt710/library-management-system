@@ -140,7 +140,7 @@ public class adduser extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Enter Username:");
 
-        jTFiduser.setToolTipText("Enter Book ID (Case-Sensitive)");
+        jTFiduser.setToolTipText("Username (Case-Sensitive)");
         jTFiduser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTFiduserActionPerformed(evt);
@@ -219,6 +219,8 @@ public class adduser extends javax.swing.JFrame {
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("Re-Enter Password:");
+
+        jPasswordField1.setToolTipText("Password (Case-Sensitive)");
 
         jPasswordField2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {

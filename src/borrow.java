@@ -159,7 +159,7 @@ public class borrow extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Book Author:");
 
-        jTFidEnter.setToolTipText("Enter Book ID (Case-Sensitive)");
+        jTFidEnter.setToolTipText("Enter Book ID");
         jTFidEnter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTFidEnterActionPerformed(evt);

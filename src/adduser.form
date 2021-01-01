@@ -271,7 +271,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTFiduser">
                   <Properties>
-                    <Property name="toolTipText" type="java.lang.String" value="Enter Book ID (Case-Sensitive)"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Username (Case-Sensitive)"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTFiduserActionPerformed"/>
@@ -376,6 +376,9 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+                  <Properties>
+                    <Property name="toolTipText" type="java.lang.String" value="Password (Case-Sensitive)"/>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JPasswordField" name="jPasswordField2">
                   <Events>

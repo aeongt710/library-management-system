@@ -301,7 +301,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTFidEnter">
                   <Properties>
-                    <Property name="toolTipText" type="java.lang.String" value="Enter Book ID (Case-Sensitive)"/>
+                    <Property name="toolTipText" type="java.lang.String" value="Enter Book ID"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTFidEnterActionPerformed"/>

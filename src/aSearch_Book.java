@@ -358,7 +358,7 @@ public class aSearch_Book extends javax.swing.JFrame {
         jPanelBookSearch.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanelBookSearch.setPreferredSize(new java.awt.Dimension(340, 286));
 
-        jTFnameEnter.setToolTipText("Enter Book name (Case-insensitive)");
+        jTFnameEnter.setToolTipText("Enter Book name");
         jTFnameEnter.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTFnameEnterKeyPressed(evt);
@@ -475,7 +475,7 @@ public class aSearch_Book extends javax.swing.JFrame {
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("Category:");
 
-        jTFidEnter.setToolTipText("Enter Book ID (Case-Sensitive)");
+        jTFidEnter.setToolTipText("Enter Book ID");
         jTFidEnter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTFidEnterActionPerformed(evt);
@@ -560,7 +560,7 @@ public class aSearch_Book extends javax.swing.JFrame {
                 .addGroup(jPanelIDSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
                     .addComponent(jTextIDavail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         CatSearchBookSearchByCategory.setBackground(new java.awt.Color(51, 102, 255));
@@ -577,6 +577,7 @@ public class aSearch_Book extends javax.swing.JFrame {
         jScrollPane1.setViewportView(CatSearchjTable1);
 
         CatSearchjComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        CatSearchjComboBox1.setToolTipText("Select Category");
         CatSearchjComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CatSearchjComboBox1ActionPerformed(evt);
@@ -588,6 +589,7 @@ public class aSearch_Book extends javax.swing.JFrame {
         CatSearchjLabel1.setText("Select Category:");
 
         CatSearchjButton1.setText("Search");
+        CatSearchjButton1.setToolTipText("Search by Category");
         CatSearchjButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CatSearchjButton1ActionPerformed(evt);
