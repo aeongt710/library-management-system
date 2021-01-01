@@ -1,5 +1,5 @@
 Ali!Karachi main bazar!Karachi!M0!Basic!3!0312412412
-asghar!G11!Islamabad!M1!Premium!5!01422141
-Hadi!Nawa Shar!Abbottabad!M2!Premium!4!01413412
-Anas!Ghol chowk!Lahore!M3!Basic!2!40124124
-Ahmad!Rex city!Faislabad!M4!Premium!4!0124120491
+asghar!G11!Islamabad!M1!Premium!4!01422141
+Hadi!Nawa Shar!Abbottabad!M2!Premium!0!01413412
+Anas!Ghol chowk!Lahore!M3!Basic!1!40124124
+Ahmad!Rex city!Faislabad!M4!Premium!0!0124120491
