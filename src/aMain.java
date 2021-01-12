@@ -41,6 +41,7 @@ public class aMain extends javax.swing.JFrame {
         catch(java.io.IOException e){
             JOptionPane.showMessageDialog(this,"Some text file is missing!");
         }
+        System.out.println("This is gradient");
     }
 
     /**
